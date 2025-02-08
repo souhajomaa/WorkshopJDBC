@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.Controllers.PersonneController">
+    <children>
+        <VBox spacing="10" alignment="CENTER">
+            <TableView fx:id="table">
+                <columns>
+                    <TableColumn text="ID" fx:id="colId"/>
+                    <TableColumn text="Nom" fx:id="colNom"/>
+                    <TableColumn text="Prénom" fx:id="colPrenom"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="5">
+                <TextField fx:id="nomField" promptText="Nom"/>
+                <TextField fx:id="prenomField" promptText="Prénom"/>
+            </HBox>
+
+            <HBox spacing="5">
+                <Button text="Ajouter" onAction="#ajouterPersonne"/>
+                <Button text="Modifier" onAction="#modifierPersonne"/>
+                <Button text="Supprimer" onAction="#supprimerPersonne"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
